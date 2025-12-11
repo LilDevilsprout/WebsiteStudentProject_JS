@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> À propos </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#concept">Concept</a></li>
+            <li><a href="list.html">Collection</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="contact.html">Contact me</a></li>
+            <li><a class="active" href="#faq">Faq</a></li>
+            <li><a href="faq.html">
+                <img class="flag" src="images/Others/frFlag.jpg" alt="Français">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How can I create an account?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>To create an account, click on the "Register" button at the top of the page. Fill in the form with your information and voilà!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>Do I have to pay to access content?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely not! This project is made to be accessible to everyone, I have no intention of making it paid.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>What is a PokeCard?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>The PokeCards are unofficial collectible cards inspired by the universe of Pokemon Café Remix. They offer an affordable alternative to the official Pokemon cards while retaining the pleasure of the collection.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>What are the different ranks of rarity?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>There are 3 ranks of rarity: rank B (common) with green border, rank A (rare) with blue border, and rank S (super rare) with purple border.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How can I get PokeCards?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>PokeCards are available as boosters, like real Pokémon cards. Each opening offers you surprises with different rarities!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>Are PokeCards official Pokémon cards?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>No, PokeCards are unofficial fan creations. All images belong to The Pokemon Company and are used for personal collection purposes.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How to see all the available collection?</h3>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can view the entire collection by visiting the "Collection" page accessible from the navigation menu.</p>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="divtitle">
+                <div class="footerFlex">
+                    <p>Pokemon's official social medias:</p>
+                    <a href="https://www.instagram.com/pokemon/" target="_blank">
+                        <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                    </a>
+                    <a href="https://x.com/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                    </a>
+                    <p>Reminder: All images used here belong to Pokemon. </p>
+                    <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Pokemon Café Remix's official website </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> PokeCards </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="list-eng.html">Collection</a></li>
+            <li><a href="about-eng.html">About me</a></li>
+            <li><a href="about-eng.html">Contact me</a></li>
+            <li><a href="faq-eng.html">Faq</a></li>
+            <li><a href="index.html">
+                <img class="flag" src="images/Others/frFlag.jpg" alt="Français">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- HEADLINE -->
+        <div>
+            <div class="title">
+                <h1 class="firstTitle"> Welcome to the PokeCards' world! </h1>
+            </div>
+
+            <div>
+                <img class="background" src="images/Others/background.jpg" alt="cafe">
+            </div>
+        </div>
+
+        <!-- FEATURED CARDS -->
+        <div>
+            <div class="title">
+                <h1 class="titleSize"> Featured PokeCards </h1>
+            </div>
+
+            <div class="cards">
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/135-sylveon.png" alt="Sylveon">
+                </div>
+
+                <div>
+                <img class="cardBorderS" src="images/PokeCards/128-greninja-shiny.png" alt="Greninja">
+                </div>
+
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/94-lucario.png" alt="Lucario">
+                </div>
+            </div>
+
+            <div class="cards">
+                <p> PokeCard rank A <b>Sylveon</b> </p>
+                <p> PokeCard rank S <b>Greninja</b> </p>
+                <p> PokeCard rank A <b>Lucario</b> </p>
+            </div>
+        </div>
+
+        <!-- CONCEPT -->
+        <div>
+            <div class="title">
+                <h1 id="concept" class="titleSize"> Concept </h1>
+            </div>
+
+            <div>
+                <p> You are a Pokemon's fan and collect cards but want to find an alternative that will not empty your wallet?<br/>
+                You are in the right place!
+                Make place for the <b>PokeCards</b>, unofficial cards to collect from the Pokemon Café's universe! <br/><br/>
+                Find the same joy by discovering different rarity cards after opening boosters: <br/>
+                B for the <b>commons</b>, A for the <b>rare</b> and S for the <b>super rare</b>!<br/><br/>
+                How do we recognize them? The B rank PokeCards have a <b>green</b> outline, A rank have a <b>blue</b> outline and S rank have a <b>purple</b> one! </p>
+            </div>
+
+            <div class="cards">
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/001-bulbasaur.png" alt="Bulbasaur">
+                </div>
+
+                <div>
+                <img class="cardBorderA" src="images/PokeCards/001-bulbasaur-anniversary.png" alt="Bulbasaur Anniversary clothes">
+                </div>
+
+                <div>
+                <img class="cardBorderS" src="images/PokeCards/001-bulbasaur-shiny.png" alt="Shiny Bulbasaur">
+                </div>
+            </div>
+
+            <div class="cards">
+                <p> PokeCard rank B <b>Bulbasaur</b> </p>
+                <p> PokeCard rank A <b>Bulbasaur Anniversary clothes</b> </p>
+                <p> PokeCard rank S <b>Shiny Bulbasaur</b> </p>
+            </div>
+
+            <div>
+                <p> There are up to 180 PokeCards to collect! What are you waiting for? Let the hunt begin! </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="divtitle">
+                <div class="footerFlex">
+                    <p>Pokemon's official social medias:</p>
+                    <a href="https://www.instagram.com/pokemon/" target="_blank">
+                        <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                    </a>
+                    <a href="https://x.com/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                    </a>
+                    <p>Reminder: All images used here belong to Pokemon. </p>
+                    <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Pokemon Café Remix's official website</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

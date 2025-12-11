@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> À propos </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#concept">Concept</a></li>
+            <li><a href="list.html">Collection</a></li>
+            <li><a class="active" href="#about">À propos de moi</a></li>
+            <li><a class="active" href="#contact">Me contacter</a></li>
+            <li><a href="faq.html">Faq</a></li>
+            <li><a href="about-eng.html">
+                <img class="flag" src="images/Others/ukFlag.jpg" alt="English">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- ABOUT ME -->
+        <div>
+            <div class="title">
+                <h1 class="titleSize"> À propos de moi </h1>
+            </div>
+
+            <div class="textBorder">
+                <p>
+                    Bonjour ! <br/> <br/>
+                    Je suis Sara, et j'étudie actuellement à l’IIM Digital School de Paris. <br/>
+                    Je souhaite faire un mastère en Game Programming :> <br/> <br/>
+                    Dans le cadre d'un cours en Coding, j'ai réalisé ce site web sur des cartes <br/>
+                    à collectionner fictives dans l'univers de Pokemon Cafe Remix ! <br/>
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACT ME -->
+        <div class="title">
+            <div>
+                <h1 id="contact" class="titleSize"> Me contacter </h1>
+                <br/>
+                <p>
+                    Des questions ? Envie de discuter à propos du site (ou autre) ? <br/>
+                    Voici divers façons de me contacter !<br/>
+                </p>
+                <br/>
+            </div>
+
+            <div class="contact">
+                <a href="mailto:contact.pokekidcards@gmail.com"> Contact par mail ! </a>
+                <a href="https://www.linkedin.com"> Contact par LinkedIn ! </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footerAbout">
+            <div class="divtitle">
+                <div class="footerFlex">
+                    <p>Réseaux officiels de Pokémon :</p>
+                    <a href="https://www.instagram.com/pokemon/" target="_blank">
+                        <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                    </a>
+                    <a href="https://x.com/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                    </a>
+                    <p>Rappel: Toutes les images utilisées ici appartiennent à Pokémon. </p>
+                    <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Site officiel de Pokémon Café Remix </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

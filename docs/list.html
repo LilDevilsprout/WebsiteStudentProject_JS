@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> Liste des PokéCartes </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Concept</a></li>
+            <li><a class="active" href="#list">Collection</a></li>
+            <li><a href="about.html">À propos de moi</a></li>
+            <li><a href="about.html">Me contacter</a></li>
+            <li><a href="faq.html">Faq</a></li>
+            <li><a href="list-eng.html">
+                <img class="flag" src="images/Others/ukFlag.jpg" alt="English">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- HEADLINE -->
+        <div>
+            <div class="title">
+                <h1 class="firstTitle"> Plus de 180 PokéCartes à collectionner ! </h1>
+                <h2> <br/> Pour le moment, il n'existe que 10 cartes, mais ne vous inquiétez-pas, le reste arrive bientôt !</h2>
+            </div>
+        </div>
+
+        <!-- FEATURED CARDS -->
+        <div>
+            <div class="title">
+                <h1 class="titleSize"> Liste complète des PokéCartes disponibles :</h1>
+            </div>
+
+            <div class="cardsList">
+                <div class="cardsListName">
+                    <img class="cardBorderB" src="images/PokeCards/001-bulbasaur.png" alt="Bulbizarre">
+                    <p> PokéCarte rang B <br/> <b>Bulbizarre</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderA" src="images/PokeCards/001-bulbasaur-anniversary.png" alt="Bulbizarre tenue Anniversaire">
+                    <p> PokéCarte rang A <br/> <b>Bulbizarre tenue Anniversaire</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderS" src="images/PokeCards/001-bulbasaur-shiny.png" alt="Bulbizarre Shiny">
+                    <p> PokéCarte rang S <br/> <b>Bulbizarre Shiny</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderB" src="images/PokeCards/002-charmander.png" alt="Salamèche">
+                    <p> PokéCarte rang B <br/> <b>Salamèche</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderA" src="images/PokeCards/002-charmander-dj.png" alt="Salamèche">
+                    <p> PokéCarte rang A <br/> <b>Salamèche DJ</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderB" src="images/PokeCards/003-charizard.png" alt="Dracaufeu">
+                    <p> PokéCarte rang B <br/> <b>Dracaufeu</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderA" src="images/PokeCards/003-charizard-painter.png" alt="Dracaufeu">
+                    <p> PokéCarte rang A <br/> <b>Dracaufeu Peintre</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderS" src="images/PokeCards/003-charizard-shiny.png" alt="Dracaufeu Shiny">
+                    <p> PokéCarte rang S <br/> <b>Dracaufeu Shiny</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderB" src="images/PokeCards/004-squirtle.png" alt="Carapuce">
+                    <p> PokéCarte rang B <br/> <b>Carapuce</b> </p>
+                </div>
+
+                <div class="cardsListName">
+                    <img class="cardBorderS" src="images/PokeCards/004-squirtle-shiny.png" alt="Carapuce Shiny">
+                    <p> PokéCarte rang S <br/> <b>Carapuce Shiny</b> </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="divtitle">
+                <div class="footerFlex">
+                    <p>Réseaux officiels de Pokémon :</p>
+                    <a href="https://www.instagram.com/pokemon/" target="_blank">
+                        <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                    </a>
+                    <a href="https://x.com/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                    </a>
+                    <p>Rappel: Toutes les images utilisées ici appartiennent à Pokémon. </p>
+                    <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Site officiel de Pokémon Café Remix </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

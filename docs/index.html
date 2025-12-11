@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> PokéCartes </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a class="active" href="#home">Accueil</a></li>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="list.html">Collection</a></li>
+            <li><a href="about.html">À propos de moi</a></li>
+            <li><a href="about.html">Me contacter</a></li>
+            <li><a href="faq.html">Faq</a></li>
+            <li><a href="index-eng.html">
+                <img class="flag" src="images/Others/ukFlag.jpg" alt="English">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- HEADLINE -->
+        <div>
+            <div class="title">
+                <h1 class="firstTitle"> Bienvenue dans le monde des PokéCartes ! </h1>
+            </div>
+
+            <div>
+                <img class="background" src="images/Others/background.jpg" alt="cafe">
+            </div>
+        </div>
+
+        <!-- FEATURED CARDS -->
+        <div>
+            <div class="title">
+                <h1 class="titleSize"> PokéCartes en vedette </h1>
+            </div>
+
+            <div class="cards">
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/135-sylveon.png" alt="Nymphali">
+                </div>
+
+                <div>
+                <img class="cardBorderS" src="images/PokeCards/128-greninja-shiny.png" alt="Amphinobi">
+                </div>
+
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/94-lucario.png" alt="Lucario">
+                </div>
+            </div>
+
+            <div class="cards">
+                <p> PokéCarte rang A <b>Nymphali</b> </p>
+                <p> PokéCarte rang S <b>Amphinobi</b> </p>
+                <p> PokéCarte rang A <b>Lucario</b> </p>
+            </div>
+        </div>
+
+        <!-- CONCEPT -->
+        <div>
+            <div class="title">
+                <h1 id="concept" class="titleSize"> Concept </h1>
+            </div>
+
+            <div>
+                <p> Vous êtes fan de Pokémon et collectionnez les cartes mais souhaitez trouver une alternative qui ne vous videra pas le portefeuille ?<br/>
+                 Vous êtes au bon endroit !
+                Place aux <b>PokéCartes</b>, des cartes non officielles à collectionner de l'univers de Pokémon Café ! <br/><br/>
+                Retrouvez la même joie en découvrant des cartes de rareté différentes après ouverture de boosters : <br/>
+                B pour les <b>communes</b>, A pour les <b>rares</b> et S pour les <b>super rares</b> !<br/><br/>
+                Comment les reconnaître ? Les PokéCartes B ont un contour <b>vert</b>, les A en ont un <b>bleu</b> et les S ont une bordure <b>violette</b> ! </p>
+            </div>
+
+            <div class="cards">
+                <div>
+                <img class="cardBorderB" src="images/PokeCards/001-bulbasaur.png" alt="Bulbizarre">
+                </div>
+
+                <div>
+                <img class="cardBorderA" src="images/PokeCards/001-bulbasaur-anniversary.png" alt="Bulbizarre tenue Anniversaire">
+                </div>
+
+                <div>
+                <img class="cardBorderS" src="images/PokeCards/001-bulbasaur-shiny.png" alt="Bulbizarre Shiny">
+                </div>
+            </div>
+
+            <div class="cards">
+                <p> PokéCarte rang B <b>Bulbizarre</b> </p>
+                <p> PokéCarte rang A <b>Bulbizarre tenue Anniversaire</b> </p>
+                <p> PokéCarte rang S <b>Bulbizarre Shiny</b> </p>
+            </div>
+
+            <div>
+                <p> Il y a plus de 180 PokéCartes à collectionner ! Qu'attendez-vous ? Que la chasse commence ! </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="divtitle">
+                <div class="footerFlex">
+                    <p>Réseaux officiels de Pokémon :</p>
+                    <a href="https://www.instagram.com/pokemon/" target="_blank">
+                        <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                    </a>
+                    <a href="https://x.com/pokemon" target="_blank">
+                        <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                    </a>
+                    <p>Rappel: Toutes les images utilisées ici appartiennent à Pokémon. </p>
+                    <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Site officiel de Pokémon Café Remix </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
