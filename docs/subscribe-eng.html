@@ -18,13 +18,13 @@
         <nav id="menu">
         <ul>
             <li><a href="index-eng.html">Home</a></li>
-            <li><a href="subscribe.html">Subscribe</a></li>
+            <li><a class="active" href="#subscribe">Subscribe</a></li>
             <li><a href="index-eng.html#concept">Concept</a></li>
             <li><a href="list-eng.html">Collection</a></li>
-            <li><a class="active" href="#about-eng">About me</a></li>
-            <li><a class="active" href="#about-eng">Contact me</a></li>
+            <li><a href="about-eng.html">About me</a></li>
+            <li><a href="about-eng.html">Contact me</a></li>
             <li><a href="faq-eng.html">Faq</a></li>
-            <li><a href="about.html">
+            <li><a href="subscribe.html">
                 <img class="flag" src="images/Others/frFlag.jpg" alt="Français">
             </a></li>
         </ul>
@@ -33,41 +33,51 @@
     </header>
 
     <main>
-        <!-- ABOUT ME -->
-        <div>
-            <div class="title">
-                <h1 id="about" class="titleSize"> About me </h1>
+        <!-- FORM -->
+        <div class="form-container">
+            <div class="message-error">
+            <ul></ul>
+            </div>
+            <div class="message-succes">
+            <h1>Form sent!</h1>
             </div>
 
-            <div class="textBorder">
-                <p>
-                    Hello ! <br/> <br/>
-                    I'm Sara, and I'm currently studying at the IIM Digital School in Paris. <br/>
-                    I wish to do a master’s in Game Programming :> <br/> <br/>
-                    As part of a course in Coding, I made this website about fictional cards<br/>
-                    to collect in the Pokemon Cafe Remix's universe! <br/>
-                </p>
-            </div>
-        </div>
-
-        <!-- CONTACT ME -->
-        <div class="title">
+            <form action="" method="POST" enctype="multipart/form-data">
             <div>
-                <h1 id="contact" class="titleSize"> Contact me </h1>
-                <br/>
-                <p>
-                    Any questions? Want to discuss about the website (or else)? <br/>
-                    Here are the different ways to reach me!<br/>
-                </p>
-                <br/>
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" id="pseudo">
             </div>
 
-            <div class="contact">
-                <a href="mailto:contact.pokekidcards"> Contact by email! </a>
-                <a href="https://www.linkedin.com"> Contact by LinkedIn! </a>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
             </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div>
+                <label for="password2">Write down the password again</label>
+                <input type="password" name="password2" id="password2">
+            </div>
+
+            <div class="radio-group">
+                <p> Would you like to receive the newsletter on your email?</p>
+
+                <label>
+                    <input type="radio" name="newsletter" value="oui" id="oui"> Yes
+                </label>
+                
+                <label>
+                    <input type="radio" name="newsletter" value="non" id="non"> No
+                </label>
+            </div>
+
+            <button type="submit">Subscribe</button>
+            </form>
         </div>
-
     </main>
 
     <footer>
