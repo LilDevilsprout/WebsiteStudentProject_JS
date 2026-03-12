@@ -52,13 +52,15 @@ function toggleAnswer(element) {
 // FORM
 
 let form = document.querySelector("form")
+if (form !== null){
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    let loader = document.querySelector(".loader");
+    console.log("Envoi du form détecté !")
+
+    let loader = document.querySelector(".animLoader");
     loader.classList.add("visible");
 
     setTimeout(function(){
-        console.log("Envoi du form détecté !")
 
         let email = document.querySelector("#email")
         let pseudo = document.querySelector("#pseudo")
@@ -146,6 +148,38 @@ form.addEventListener("submit", function(event) {
         }
         }, 2000);
 })
+}
+
+// GLIGHTBOX
+
+const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true
+});
+
+// GSAP
+
+gsap.registerPlugin(SplitText);
+
+let split, animation;
+document.querySelector("#chars").addEventListener("click", () => {
+  animation && animation.revert();
+  animation = gsap.from(split.chars, {
+    x: 150,
+    opacity: 0,
+    duration: 0.7, 
+    ease: "power4",
+    stagger: 0.04
+  })
+});
+
+function setup() {
+  split && split.revert();
+  animation && animation.revert();
+  split = SplitText.create(".text", {type:"chars"});
+}
+setup();
 
 
 // DARK MODE
