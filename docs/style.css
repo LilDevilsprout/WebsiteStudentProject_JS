@@ -517,6 +517,7 @@ body.dark-mode .logo {
     }
 }
 
+/* the title comes from the left and stops at the center with a little bounce after loading the page */
 .animTitle{
     animation-name: slideFill;
     animation-duration: 2s;
@@ -542,6 +543,7 @@ body.dark-mode .logo {
     }
 }
 
+/* the cards pulse, the one at the center pulsing a 0.5s after the others */
 .animPulse{
     animation-name: pulse;
     animation-duration: 1s;
@@ -567,6 +569,7 @@ body.dark-mode .logo {
     animation-delay: 0.5s;
 }
 
+/* the cards get a little bit bigger when the cursor hovers over them */
 .animZoom{
     transition-duration: 1s;
     transition-property: transform;
@@ -576,6 +579,7 @@ body.dark-mode .logo {
     transform: scale(1.20);
 }
 
+/* a loader pops on the screen after clicking the submit button, then disappear after 2s */
 .animLoader {
     width: 100px;
     height: 100px;
@@ -599,6 +603,7 @@ body.dark-mode .logo {
   display: block;
 }
 
+/* the form appears from the top when loading the page */
 .animForm{
     animation-name: reveal;
     animation-duration: 1s;

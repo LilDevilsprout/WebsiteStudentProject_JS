@@ -57,10 +57,10 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     console.log("Envoi du form détecté !")
 
-    let loader = document.querySelector(".animLoader");
+    let loader = document.querySelector(".animLoader"); // when clicking submit, the loader animation is revealed
     loader.classList.add("visible");
 
-    setTimeout(function(){
+    setTimeout(function(){      // the function is called after waiting for 2 sec (for the loader animation)
 
         let email = document.querySelector("#email")
         let pseudo = document.querySelector("#pseudo")
@@ -72,18 +72,18 @@ form.addEventListener("submit", function(event) {
         let newsletterOui = document.querySelector("#oui")
         let newsletterNon = document.querySelector("#non")
 
-        errorList.replaceChildren()
-        errorContainer.classList.remove("visible")
-        successContainer.classList.remove("visible")
-        loader.classList.remove("visible")
+        errorList.replaceChildren()                     // remove the errors if some were found the last time clicking "submit"
+        errorContainer.classList.remove("visible")      // hide the pop-up for the errors
+        successContainer.classList.remove("visible")    // hide the pop-up for the form successfully sent
+        loader.classList.remove("visible")              // hide the loader
 
-        if (email.value == "") {
+        if (email.value == "") {        // check the email 
             console.log("invalide")
         } else {
             email.classList.add("success")
         }
 
-        if (pseudo.value.length < 6) {
+        if (pseudo.value.length < 6) {     // check the pseudo
             errorContainer.classList.add("visible");
             pseudo.classList.remove("success");
 
@@ -98,8 +98,7 @@ form.addEventListener("submit", function(event) {
         let passCheck = new RegExp(
         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$");
 
-        // Si le mdp n"a pas 10 caractère ou ne respecte pas la regex
-        if (password.value.length < 10 || passCheck.test(password.value) == false) {
+        if (password.value.length < 10 || passCheck.test(password.value) == false) {    // check the password
             errorContainer.classList.add("visible");
             password.classList.remove("success");
 
@@ -110,7 +109,7 @@ form.addEventListener("submit", function(event) {
         } else {
             password.classList.add("success")
 
-            if (password.value == password2.value) {
+            if (password.value == password2.value) {    // check if the two passwords are different
                 passwordRepeat.classList.add("success");
             } else {
                 errorContainer.classList.add("visible");
@@ -122,7 +121,7 @@ form.addEventListener("submit", function(event) {
             }
         }
 
-        if (newsletterNon.checked || newsletterOui.checked) {
+        if (newsletterNon.checked || newsletterOui.checked) {   // check if any radio buttons is checked
             newsletterOui.classList.add("success");
             newsletterNon.classList.add("success");
         } else {
@@ -132,10 +131,8 @@ form.addEventListener("submit", function(event) {
 
                 errorList.appendChild(err)
         }
-
-        successContainer.classList.remove("visible")
         
-        if (pseudo.classList.contains("success") &&
+        if (pseudo.classList.contains("success") &&        // last check for everything
             email.classList.contains("success") &&
             password.classList.contains("success") &&
             passwordRepeat.classList.contains("success") &&
