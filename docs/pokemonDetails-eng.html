@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <!--PARAMETERS AND RESOURCES (Fonts, CSS)-->
+    <title> PokeCards </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- NOTO FONT -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="burger-btn" id="burgerBtn"> MENU </button>
+        <!-- MENU -->
+        <nav id="menu">
+        <ul>
+            <li><a href="index-eng.html">Home</a></li>
+            <li><a href="subscribe-eng.html">Subscribe</a></li>
+            <li><a href="index-eng.html">Concept</a></li>
+            <li><a href="list-eng.html">Collection</a></li>
+            <li><a class="active" href="pokemonDetails-eng.html">Pokemon Details</a></li>
+            <li><a href="about-eng.html">About me</a></li>
+            <li><a href="about-eng.html">Contact me</a></li>
+            <li><a href="faq-eng.html">Faq</a></li>
+            <li><a href="pokemonDetails-eng.html">
+                <img class="flag" src="images/Others/frFlag.jpg" alt="Français">
+            </a></li>
+        </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <div class="title">
+        <h1 class="firstTitle">Search for a Pokemon!</h1>
+    </div>
+
+    <div class="form-container">
+        <input type="text" id="pokemonSearch" placeholder="Enter a Pokemon's name" />
+        <button id="getPokemon">See its details</button>
+        <div id="pokemon"></div>
+    </div>
+
+    <script>
+        pokemonName = document.getElementById("pokemonSearch");
+        getPokemon.addEventListener('click', function(event) {
+            displayPokemon(pokemonName.value.toLowerCase());
+        });
+
+        function fetchPokemon(pokemon) {
+            return fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon)    //add the pokemon's name to the url for the api to work
+                .then((response) => response.json())
+        }
+
+        async function displayPokemon(pokemon) {
+            const data = await fetchPokemon(pokemon)
+            document.getElementById("pokemon").innerHTML = `
+                <h1>Name: ${data.name.toUpperCase()}</h1>
+                <h1>Height: ${data.height/10} meters</h1>
+                <h1>Weight: ${data.weight/10} kilos</h1>
+                <img src="${data.sprites.front_default}" alt="${data.name}"/>
+                <h2>Original version</h2>
+                <img src="${data.sprites.front_shiny}" alt="${data.name}"/>
+                <h2>Shiny version</h2>
+                `;
+        }   //the API returns the height in decimeters and weight in hectograms
+    </script>
+
+    <footer>
+            <!-- FOOTER -->
+            <div class="footer">
+                <div class="divtitle">
+                    <div class="footerFlex">
+                        <p>Pokemon's official social medias:</p>
+                        <a href="https://www.instagram.com/pokemon/" target="_blank">
+                            <img class="logo" src="images/Others/logoInsta.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.youtube.com/user/pokemon" target="_blank">
+                            <img class="logo" src="images/Others/logoYoutube.png" alt="Youtube">
+                        </a>
+                        <a href="https://x.com/pokemon" target="_blank">
+                            <img class="logo" src="images/Others/logoX.png" alt="Twitter">
+                        </a>
+                        <p>Reminder: All images used here belong to Pokemon. </p>
+                        <a target="_blank" href="https://cafemix.pokemon.com/en-us/">  Pokemon Café Remix's official website</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
